@@ -49,7 +49,7 @@ public class Option : MonoBehaviour
         isFullScreen = Screen.fullScreen;
         fullScreenToggle.isOn = isFullScreen;
         if (!isFullScreen) {
-            string currentResolution = Screen.width.ToString() + "x" + Screen.height.ToString();
+            var currentResolution = $"{Screen.width}x{Screen.height}";
             resolutionDropdown.value = resolutionDropdown.options
                 .IndexOf(resolutionDropdown.options.Find(r => r.text == currentResolution));
         }
